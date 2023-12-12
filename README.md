@@ -8,8 +8,8 @@ This folder provides an example on how to **Brige NFTs** using the  `polygonZKEV
 - npm version: >= 7.x
 
 ## Deployment and usage instructions for the CDK NFT bridge example
-
-As example for `goerli`(or geth as root chain)/`polygonZKEVMTestnet or CDK`(as child chain) testnets:
+It works on any EVM chain as L1(root chain ) and CDK as L2(child chain).
+As an example `goerli`(or `geth` as root chain) and `polygonZKEVMTestnet` or `CDK`(as child chain):
 This script will deploy on both networks the same contract using the deterministic deployment:
 
 ### Deployment
@@ -67,7 +67,7 @@ Next, we need to bridge the NFT on the root chain using the script:
 npm run bridge:mockNFT
 ```
 
-Now we have to wait until the message is forwarded to L2, there is a final script that will check it if the claim is ready. If it is ready, it will actually claim the erc20 in the other layer:
+Now we have to wait until the message is forwarded to L2, there is a final script that will check it if the claim is ready. If it is ready, it will actually claim the NFT on the other layer:
 
 ```
 npm run claim:mockNFT
